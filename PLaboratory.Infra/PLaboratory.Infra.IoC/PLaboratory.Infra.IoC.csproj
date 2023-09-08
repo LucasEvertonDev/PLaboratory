@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LcsEverton.MS.Libs.Infra.IoC" Version="17.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PLaboratory.Core\PLaboratory.Core.Application\PLaboratory.Core.Application.csproj" />
+    <ProjectReference Include="..\..\PLaboratory.Core\PLaboratory.Core.Domain\PLaboratory.Core.Domain.csproj" />
+    <ProjectReference Include="..\PLaboratory.Infra.Data\PLaboratory.Infra.Data.csproj" />
+    <ProjectReference Include="..\PLaboratory.Plugins\PLaboratory.Plugins.csproj" />
+  </ItemGroup>
+
+
+</Project>
