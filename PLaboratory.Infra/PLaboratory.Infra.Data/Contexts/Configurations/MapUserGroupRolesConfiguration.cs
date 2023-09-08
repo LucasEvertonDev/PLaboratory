@@ -27,12 +27,12 @@ public class MapUserGroupRolesConfiguration : BaseEntityBasicConfiguration<MapUs
 
     public void DefaultData(EntityTypeBuilder<MapUserGroupRoles> builder)
     {
-        builder.HasData(new MapUserGroupRoles
-        {
-            Id = new Guid("b94afe49-6630-4bf8-a19d-923af259f475"),
-            Situation = (int)Situation.Active,
-            RoleId = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
-            UserGroupId = new Guid("F97E565D-08AF-4281-BC11-C0206EAE06FA"),
-        });
+        ////builder.HasData(new MapUserGroupRoles
+        ////{
+        ////    Id = new Guid("b94afe49-6630-4bf8-a19d-923af259f475"),
+        ////    Situation = (int)Situation.Active,
+        ////    RoleId = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
+        ////    UserGroupId = new Guid("F97E565D-08AF-4281-BC11-C0206EAE06FA"),
+        ////});
     }
 }

@@ -1,4 +1,5 @@
 using MS.Libs.Infra.IoC.Extensions;
+using PLaboratory.Infra.IoC.Extensions;
 using PLaboratory.WebAPI.Infrastructure;
 using Serilog;
 using Serilog.Events;
@@ -14,7 +15,7 @@ public class Program
         Host.CreateDefaultBuilder(args)
              .ConfigureAppConfiguration((hostingContext, config) =>
              {
-                 hostingContext.RegisterSerilog(config);
+                 hostingContext.RegisterSerilogMySql(config);
              })
             .UseSerilog()
             .ConfigureWebHostDefaults(webBuilder =>

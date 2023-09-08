@@ -46,10 +46,9 @@ public class DependencyInjection: BaseDependencyInjection<AppSettings>
 
     protected override void AddDbContexts(IServiceCollection services, AppSettings configuration)
     {
-        //É obrigatório definir a versão do My Sql 
         services.AddDbContext<AuthDbContext>(options =>
-              options.UseSqlServer(configuration.SqlConnections.DbConnection,
-              b => b.MigrationsAssembly(typeof(AuthDbContext).Assembly.FullName)));
+        options.UseMySql(configuration.SqlConnections.DbConnection,
+            ServerVersion.AutoDetect(configuration.SqlConnections.DbConnection)));
 
         services.AddScoped<IUnitOfWork, UnitOfWork<AuthDbContext>>();
     }

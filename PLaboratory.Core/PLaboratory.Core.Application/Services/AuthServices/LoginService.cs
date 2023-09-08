@@ -63,7 +63,7 @@ public class LoginService : BaseService<LoginDto>, ILoginService
 
     protected override async Task ValidateAsync(LoginDto param)
     {
-        if (!(await _searchClientCredentials.GetListFromCacheAsync(a => a.ClientId == param.ClientId && a.ClientSecret == param.ClientSecret)).Any())
+        if (!(await _searchClientCredentials.GetListFromCacheAsync(a => a.ClientId == new Guid(param.ClientId) && a.ClientSecret == param.ClientSecret)).Any())
         {
             BusinessException(AuthErrors.Business.CLIENT_CREDENTIALS_INVALID);
         }

@@ -21,11 +21,11 @@ public class RoleConfiguration : BaseEntityBasicConfiguration<Role>
 
     public void DefaultData(EntityTypeBuilder<Role> builder)
     {
-        builder.HasData(new Role
-        {
-            Id = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
-            Name = "CHANGE_STUDENTS",
-            Situation = (int)Situation.Active
-        });
+        ////builder.HasData(new Role
+        ////{
+        ////    Id = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
+        ////    Name = "CHANGE_STUDENTS",
+        ////    Situation = (int)Situation.Active
+        ////});
     }
 }

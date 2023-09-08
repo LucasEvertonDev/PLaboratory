@@ -6,7 +6,7 @@ namespace PLaboratory.Core.Domain.DbContexts.Entities;
 [Cache(Key: "ClientCredentials", SlidingExpirationInMinutes:10, AbsoluteExpirationInMinutes: 15)]
 public class ClientCredentials : BaseEntity
 {
-    public string ClientId { get; set; }
+    public Guid ClientId { get; set; }
 
     public string ClientSecret { get; set; }
 

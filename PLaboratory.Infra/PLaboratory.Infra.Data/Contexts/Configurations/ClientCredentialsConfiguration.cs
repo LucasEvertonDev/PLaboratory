@@ -25,14 +25,14 @@ public class ClientCredentialsConfiguration : BaseEntityConfiguration<ClientCred
 
     public void DefaultData(EntityTypeBuilder<ClientCredentials> builder)
     {
-        builder.HasData(new ClientCredentials
-        {
-            Id = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247482"),
-            ClientId = "7064bbbf-5d11-4782-9009-95e5a6fd6822",
-            ClientSecret = "dff0bcb8dad7ea803e8d28bf566bcd354b5ec4e96ff4576a1b71ec4a21d56910",
-            ClientDescription = "Cliente padrão da aplicação",
-            CreateDate = new DateTime(2023, 08, 26),
-            Situation = (int)Situation.Active
-        });
+        //builder.HasData(new ClientCredentials
+        //{
+        //    Id = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247482"),
+        //    ClientId = new Guid("7064bbbf-5d11-4782-9009-95e5a6fd6822"),
+        //    ClientSecret = "dff0bcb8dad7ea803e8d28bf566bcd354b5ec4e96ff4576a1b71ec4a21d56910",
+        //    ClientDescription = "Cliente padrão da aplicação",
+        //    CreateDate = new DateTime(2023, 08, 26),
+        //    Situation = (int)Situation.Active
+        //});
     }
 }

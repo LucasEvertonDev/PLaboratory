@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using MS.Libs.Core.Application.Services;
+﻿using MS.Libs.Core.Application.Services;
 using MS.Libs.Core.Domain.DbContexts.Repositorys;
 using MS.Libs.Core.Domain.Infra.Claims;
 using MS.Libs.Infra.Utils.Exceptions;
@@ -65,7 +64,7 @@ public class RefreshTokenService : BaseService<RefreshTokenDto>, IRefreshTokenSe
 
     protected override async Task ValidateAsync(RefreshTokenDto refreshTokenDto)
     {
-        if (!(await _searchClientCredentials.GetListFromCacheAsync(a => a.ClientId == refreshTokenDto.ClientId && a.ClientSecret == refreshTokenDto.ClientSecret)).Any())
+        if (!(await _searchClientCredentials.GetListFromCacheAsync(a => a.ClientId == new Guid(refreshTokenDto.ClientId) && a.ClientSecret == refreshTokenDto.ClientSecret)).Any())
         {
             BusinessException(AuthErrors.Business.CLIENT_CREDENTIALS_INVALID);
         }

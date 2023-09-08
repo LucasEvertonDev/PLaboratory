@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MS.Libs.Infra.Data.Context;
 using PLaboratory.Core.Domain.DbContexts.Entities;
@@ -11,7 +10,7 @@ public class AuthDbContext : BaseDbContext<AuthDbContext>
     public AuthDbContext(DbContextOptions<AuthDbContext> options, IHttpContextAccessor httpContext)
        : base(options, httpContext)
     {
-        Database.Migrate();
+        //Database.Migrate();
     }
 
     public DbSet<User> Users { get; set; }
