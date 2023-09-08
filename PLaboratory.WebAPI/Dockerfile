@@ -12,6 +12,7 @@ COPY ["PLaboratory.Infra/PLaboratory.Infra.IoC/PLaboratory.Infra.IoC.csproj", "P
 COPY ["PLaboratory.Core/PLaboratory.Core.Application/PLaboratory.Core.Application.csproj", "PLaboratory.Core/PLaboratory.Core.Application/"]
 COPY ["PLaboratory.Core/PLaboratory.Core.Domain/PLaboratory.Core.Domain.csproj", "PLaboratory.Core/PLaboratory.Core.Domain/"]
 COPY ["PLaboratory.Infra/PLaboratory.Infra.Data/PLaboratory.Infra.Data.csproj", "PLaboratory.Infra/PLaboratory.Infra.Data/"]
+COPY ["PLaboratory.Infra/PLaboratory.Plugins/PLaboratory.Plugins.csproj", "PLaboratory.Infra/PLaboratory.Plugins/"]
 RUN dotnet restore "PLaboratory.WebAPI/PLaboratory.WebAPI.csproj"
 COPY . .
 WORKDIR "/src/PLaboratory.WebAPI"
