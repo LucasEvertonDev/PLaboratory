@@ -3,8 +3,8 @@ using PLaboratory.Core.Domain.Models.Users;
 using PLaboratory.Core.Domain.Services.UserServices;
 using PLaboratory.Test.Infrastructure;
 using FluentAssertions;
-using MS.Libs.Infra.Utils.Exceptions;
 using PLaboratory.Core.Domain.Contansts;
+using PLaboratory.Core.Domain.Utils.Exceptions;
 
 namespace PLaboratory.Test.Services.UserServices;
 

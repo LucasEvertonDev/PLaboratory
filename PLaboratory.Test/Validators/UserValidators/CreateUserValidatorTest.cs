@@ -1,9 +1,9 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
-using MS.Libs.Core.Domain.Plugins.Validators;
-using MS.Libs.Infra.Utils.Exceptions;
 using PLaboratory.Core.Domain.Contansts;
 using PLaboratory.Core.Domain.Models.Users;
+using PLaboratory.Core.Domain.Plugins.Validators;
+using PLaboratory.Core.Domain.Utils.Exceptions;
 using PLaboratory.Test.Infrastructure;
 
 namespace PLaboratory.Test.Validators.UserValidators;

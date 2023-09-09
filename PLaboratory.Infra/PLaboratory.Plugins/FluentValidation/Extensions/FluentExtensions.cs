@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.Validators;
-using MS.Libs.Core.Domain.Models.Error;
+using PLaboratory.Core.Domain.Models.Error;
 
 namespace PLaboratory.Plugins.FluentValidation.Extensions;
 

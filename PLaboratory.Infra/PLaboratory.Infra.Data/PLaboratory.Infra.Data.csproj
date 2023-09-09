@@ -24,4 +24,8 @@
     <ProjectReference Include="..\..\PLaboratory.Core\PLaboratory.Core.Domain\PLaboratory.Core.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contexts\Base\" />
+  </ItemGroup>
+
 </Project>

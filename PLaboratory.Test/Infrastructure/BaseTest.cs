@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MS.Libs.Core.Domain.Infra.AppSettings;
-using MS.Libs.Infra.Utils.Activator;
+using PLaboratory.Core.Domain.Infra.AppSettings;
+using PLaboratory.Core.Domain.Utils.Activator;
 using PLaboratory.Infra.IoC;
 
 namespace PLaboratory.Test.Infrastructure;

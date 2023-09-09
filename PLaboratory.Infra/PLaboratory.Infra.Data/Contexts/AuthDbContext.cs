@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using MS.Libs.Infra.Data.Context;
 using PLaboratory.Core.Domain.DbContexts.Entities;
 
 namespace PLaboratory.Infra.Data.Contexts;

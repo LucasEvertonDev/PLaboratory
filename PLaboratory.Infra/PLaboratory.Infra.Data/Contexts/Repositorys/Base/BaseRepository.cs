@@ -1,9 +1,8 @@
-﻿using MS.Libs.Core.Domain.DbContexts.Entities.Base;
-using MS.Libs.Infra.Data.Context.Repositorys;
+﻿using PLaboratory.Core.Domain.DbContexts.Entities.Base;
 
 namespace PLaboratory.Infra.Data.Contexts.Repositorys.Base;
 
-public class Repository<TEntity> : BaseRepository<AuthDbContext, TEntity> where TEntity : BaseEntityBasic
+public class Repository<TEntity> : Repository<AuthDbContext, TEntity> where TEntity : BaseEntityBasic
 {
     public Repository(IServiceProvider serviceProvider) : base(serviceProvider)
     {

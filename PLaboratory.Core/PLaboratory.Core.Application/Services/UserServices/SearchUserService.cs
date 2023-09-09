@@ -1,7 +1,7 @@
-﻿using MS.Libs.Core.Application.Services;
-using MS.Libs.Core.Domain.DbContexts.Repositorys;
-using MS.Libs.Core.Domain.Models.Base;
+﻿using PLaboratory.Core.Application.Services.Base;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.DbContexts.Repositorys.Base;
+using PLaboratory.Core.Domain.Models.Base;
 using PLaboratory.Core.Domain.Models.Users;
 using PLaboratory.Core.Domain.Services.UserServices;
 

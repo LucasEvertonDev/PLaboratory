@@ -1,4 +1,4 @@
-﻿namespace MS.Libs.Infra.Utils.Activator;
+﻿namespace PLaboratory.Core.Domain.Utils.Activator;
 
 public static class App
 {

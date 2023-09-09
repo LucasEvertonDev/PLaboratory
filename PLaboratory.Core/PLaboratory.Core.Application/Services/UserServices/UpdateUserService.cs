@@ -1,10 +1,10 @@
-﻿using MS.Libs.Core.Application.Services;
-using MS.Libs.Core.Domain.DbContexts.Repositorys;
-using MS.Libs.Core.Domain.Plugins.Validators;
-using MS.Libs.Infra.Utils.Exceptions;
+﻿using PLaboratory.Core.Application.Services.AuthServices;
+using PLaboratory.Core.Application.Services.Base;
 using PLaboratory.Core.Domain.Contansts;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.DbContexts.Repositorys.Base;
 using PLaboratory.Core.Domain.Models.Users;
+using PLaboratory.Core.Domain.Plugins.Validators;
 using PLaboratory.Core.Domain.Services.UserServices;
 
 namespace PLaboratory.Core.Application.Services.UserServices;

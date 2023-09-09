@@ -1,5 +1,5 @@
-﻿using MS.Libs.Core.Domain.DbContexts.Entities.Base;
-using MS.Libs.Core.Domain.Infra.Attributes;
+﻿using PLaboratory.Core.Domain.DbContexts.Entities.Base;
+using PLaboratory.Core.Domain.Infra.Attributes;
 
 namespace PLaboratory.Core.Domain.DbContexts.Entities;
 

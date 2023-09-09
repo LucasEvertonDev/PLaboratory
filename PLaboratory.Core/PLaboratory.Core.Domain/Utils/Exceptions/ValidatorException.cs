@@ -1,8 +1,8 @@
-﻿using MS.Libs.Core.Domain.Models.Error;
-using MS.Libs.Infra.Utils.Exceptions.Base;
+﻿using PLaboratory.Core.Domain.Models.Error;
+using PLaboratory.Core.Domain.Utils.Exceptions.Base;
 using System.Runtime.Serialization;
 
-namespace MS.Libs.Infra.Utils.Exceptions;
+namespace PLaboratory.Core.Domain.Utils.Exceptions;
 
 [Serializable]
 public class ValidatorException : MSException

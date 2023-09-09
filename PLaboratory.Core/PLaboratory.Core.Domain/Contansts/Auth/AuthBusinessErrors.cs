@@ -1,4 +1,4 @@
-﻿using MS.Libs.Core.Domain.Models.Error;
+﻿using PLaboratory.Core.Domain.Models.Error;
 
 namespace PLaboratory.Core.Domain.Contansts.Auth;
 

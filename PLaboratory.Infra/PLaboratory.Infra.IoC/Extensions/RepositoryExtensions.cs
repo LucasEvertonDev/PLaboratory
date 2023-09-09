@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MS.Libs.Core.Domain.DbContexts.Entities.Base;
-using MS.Libs.Core.Domain.DbContexts.Repositorys;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.DbContexts.Entities.Base;
+using PLaboratory.Core.Domain.DbContexts.Repositorys.Base;
 using PLaboratory.Infra.Data.Contexts.Repositorys.Base;
 
 namespace PLaboratory.Infra.IoC.Extensions

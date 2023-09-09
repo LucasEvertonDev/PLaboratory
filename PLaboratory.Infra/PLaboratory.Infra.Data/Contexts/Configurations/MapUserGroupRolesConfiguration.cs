@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using MS.Libs.Core.Domain.DbContexts.Enuns;
-using MS.Libs.Infra.Data.Context.Configurations;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.DbContexts.Enuns;
+using PLaboratory.Infra.Data.Contexts.Configurations.Base;
 
 namespace PLaboratory.Infra.Data.Contexts.Configurations;
 

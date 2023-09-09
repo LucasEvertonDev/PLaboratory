@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using MS.Libs.Core.Domain.Models.Base;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.Models.Base;
 using PLaboratory.Core.Domain.Models.Users;
 
 namespace PLaboratory.Plugins.AutoMapper.Profiles;

@@ -1,14 +1,15 @@
-﻿using MS.Libs.Core.Application.Services;
-using MS.Libs.Core.Domain.DbContexts.Repositorys;
-using MS.Libs.Core.Domain.Infra.Claims;
-using MS.Libs.Infra.Utils.Exceptions;
-using MS.Libs.Infra.Utils.Extensions;
+﻿using PLaboratory.Core.Application.Services.Base;
 using PLaboratory.Core.Domain.Contansts;
 using PLaboratory.Core.Domain.DbContexts.Entities;
 using PLaboratory.Core.Domain.DbContexts.Repositorys;
+using PLaboratory.Core.Domain.DbContexts.Repositorys.Base;
+using PLaboratory.Core.Domain.Infra.Claims;
 using PLaboratory.Core.Domain.Models.Auth;
+using PLaboratory.Core.Domain.Models.Error;
 using PLaboratory.Core.Domain.Plugins.JWT;
 using PLaboratory.Core.Domain.Services.AuthServices;
+using PLaboratory.Core.Domain.Utils.Extensions;
+using System.Runtime.Serialization;
 
 namespace PLaboratory.Core.Application.Services.AuthServices;
 
@@ -75,5 +76,32 @@ public class RefreshTokenService : BaseService<RefreshTokenDto>, IRefreshTokenSe
         {
             throw new BusinessException(AuthErrors.Business.INVALID_REFRESH_TOKEN);
         }
+    }
+}
+
+[Serializable]
+internal class BusinessException : Exception
+{
+    private ErrorModel iNVALID_REFRESH_TOKEN;
+
+    public BusinessException()
+    {
+    }
+
+    public BusinessException(ErrorModel iNVALID_REFRESH_TOKEN)
+    {
+        this.iNVALID_REFRESH_TOKEN = iNVALID_REFRESH_TOKEN;
+    }
+
+    public BusinessException(string message) : base(message)
+    {
+    }
+
+    public BusinessException(string message, Exception innerException) : base(message, innerException)
+    {
+    }
+
+    protected BusinessException(SerializationInfo info, StreamingContext context) : base(info, context)
+    {
     }
 }

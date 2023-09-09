@@ -1,4 +1,3 @@
-using MS.Libs.Infra.IoC.Extensions;
 using PLaboratory.Infra.IoC.Extensions;
 using PLaboratory.WebAPI.Infrastructure;
 using Serilog;

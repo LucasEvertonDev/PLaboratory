@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MS.Libs.Core.Domain.Infra.AppSettings;
+using PLaboratory.Core.Domain.Infra.AppSettings;
 
-namespace MS.Libs.Infra.IoC
+namespace PLaboratory.Infra.IoC.Base
 {
     public abstract class BaseDependencyInjection<TConfig> where TConfig : AppSettings
     {

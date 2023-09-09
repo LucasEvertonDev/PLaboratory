@@ -1,5 +1,5 @@
-﻿using MS.Libs.Core.Domain.DbContexts.Repositorys;
-using PLaboratory.Core.Domain.DbContexts.Entities;
+﻿using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.DbContexts.Repositorys.Base;
 
 namespace PLaboratory.Core.Domain.DbContexts.Repositorys;
 

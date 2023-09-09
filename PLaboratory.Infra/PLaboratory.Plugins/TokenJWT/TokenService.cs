@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using MS.Libs.Core.Domain.Constants;
-using MS.Libs.Core.Domain.Infra.Claims;
+using PLaboratory.Core.Domain.Contansts.JWT;
 using PLaboratory.Core.Domain.DbContexts.Entities;
+using PLaboratory.Core.Domain.Infra.Claims;
 using PLaboratory.Core.Domain.Plugins.JWT;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;

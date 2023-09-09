@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace MS.Libs.Infra.Utils.Exceptions.Base;
+namespace PLaboratory.Core.Domain.Utils.Exceptions.Base;
 
 [Serializable]
 public class MSException : SystemException

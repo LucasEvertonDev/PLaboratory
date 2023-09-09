@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MS.Libs.Core.Domain.Models.Base;
+using PLaboratory.Core.Domain.Models.Base;
 using System.ComponentModel;
 
 namespace PLaboratory.Core.Domain.Models.Auth;

@@ -1,10 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using MS.Libs.Core.Domain.Infra.AppSettings;
-using MS.Libs.Infra.IoC.Extensions;
 using Serilog.Core;
 using Serilog.Events;
 using Serilog;
+using PLaboratory.Core.Domain.Infra.AppSettings;
 
 namespace PLaboratory.Infra.IoC.Extensions;
 

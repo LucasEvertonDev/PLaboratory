@@ -1,8 +1,7 @@
 ﻿using FluentValidation;
-using MS.Libs.Core.Domain.Plugins.Validators;
-using MS.Libs.Infra.Plugins.Validators;
 using PLaboratory.Core.Domain.Contansts;
 using PLaboratory.Core.Domain.Models.Users;
+using PLaboratory.Core.Domain.Plugins.Validators;
 using PLaboratory.Plugins.FluentValidation.Extensions;
 
 namespace PLaboratory.Plugins.FluentValidation.User;

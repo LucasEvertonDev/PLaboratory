@@ -1,4 +1,4 @@
-﻿namespace MS.Libs.Infra.Utils.Extensions
+﻿namespace PLaboratory.Core.Domain.Utils.Extensions
 {
     public static class ServiceProviderExtensions
     {

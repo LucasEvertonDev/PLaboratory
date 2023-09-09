@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MS.Libs.Core.Domain.Models.Base;
-using MS.Libs.Core.Domain.Models.Dto;
-using MS.Libs.WebApi.Controllers;
-using MS.Libs.WebApi.Infrastructure.Attributes;
+using PLaboratory.Core.Domain.Models.Base;
+using PLaboratory.Core.Domain.Models.Dto;
 using PLaboratory.Core.Domain.Models.Users;
 using PLaboratory.Core.Domain.Services.UserServices;
+using PLaboratory.WebAPI.Infrastructure.Attributes;
 
 namespace PLaboratory.WebAPI.Controllers;
 
