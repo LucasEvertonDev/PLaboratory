@@ -69,7 +69,7 @@ public class Repository<TContext, TEntity> : ICreateRepository<TEntity>, IDelete
 
     public virtual async Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate)
     {
-        return await _applicationDbContext.Set<TEntity>().AsNoTracking().SingleOrDefaultAsync(predicate);
+        return await _applicationDbContext.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync(predicate);
     }
 
     public virtual async Task<IEnumerable<TEntity>> ToListAsync()
