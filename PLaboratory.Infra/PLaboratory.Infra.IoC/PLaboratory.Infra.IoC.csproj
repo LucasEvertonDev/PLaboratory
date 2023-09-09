@@ -16,6 +16,4 @@
     <ProjectReference Include="..\PLaboratory.Infra.Data\PLaboratory.Infra.Data.csproj" />
     <ProjectReference Include="..\PLaboratory.Plugins\PLaboratory.Plugins.csproj" />
   </ItemGroup>
-
-
 </Project>

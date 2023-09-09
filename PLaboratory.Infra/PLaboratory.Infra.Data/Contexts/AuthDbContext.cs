@@ -10,7 +10,7 @@ public class AuthDbContext : BaseDbContext<AuthDbContext>
     public AuthDbContext(DbContextOptions<AuthDbContext> options, IHttpContextAccessor httpContext)
        : base(options, httpContext)
     {
-        //Database.Migrate();
+        Database.Migrate();
     }
 
     public DbSet<User> Users { get; set; }

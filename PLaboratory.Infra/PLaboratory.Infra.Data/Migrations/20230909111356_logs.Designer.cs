@@ -11,8 +11,8 @@ using PLaboratory.Infra.Data.Contexts;
 namespace PLaboratory.Infra.Data.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20230908211319_StartMySql")]
-    partial class StartMySql
+    [Migration("20230909111356_logs")]
+    partial class logs
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,16 +26,14 @@ namespace PLaboratory.Infra.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("ClientDescription")
                         .HasMaxLength(300)
                         .HasColumnType("varchar(300)");
 
                     b.Property<Guid>("ClientId")
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("ClientSecret")
                         .IsRequired()
@@ -43,9 +41,7 @@ namespace PLaboratory.Infra.Data.Migrations
                         .HasColumnType("varchar(300)");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<int>("Situation")
                         .ValueGeneratedOnAdd()
@@ -58,17 +54,27 @@ namespace PLaboratory.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ClientsCredentials", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9245fe4a-d402-451c-b9ed-9c1a04247482"),
+                            ClientDescription = "Cliente padrão da aplicação",
+                            ClientId = new Guid("7064bbbf-5d11-4782-9009-95e5a6fd6822"),
+                            ClientSecret = "dff0bcb8dad7ea803e8d28bf566bcd354b5ec4e96ff4576a1b71ec4a21d56910",
+                            CreateDate = new DateTime(2023, 8, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Situation = 1
+                        });
                 });
 
             modelBuilder.Entity("PLaboratory.Core.Domain.DbContexts.Entities.MapUserGroupRoles", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("RoleId")
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<int>("Situation")
                         .ValueGeneratedOnAdd()
@@ -76,7 +82,7 @@ namespace PLaboratory.Infra.Data.Migrations
                         .HasDefaultValue(1);
 
                     b.Property<Guid>("UserGroupId")
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.HasKey("Id");
 
@@ -85,14 +91,22 @@ namespace PLaboratory.Infra.Data.Migrations
                     b.HasIndex("UserGroupId");
 
                     b.ToTable("MapUserGroupRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("b94afe49-6630-4bf8-a19d-923af259f475"),
+                            RoleId = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
+                            Situation = 1,
+                            UserGroupId = new Guid("f97e565d-08af-4281-bc11-c0206eae06fa")
+                        });
                 });
 
             modelBuilder.Entity("PLaboratory.Core.Domain.DbContexts.Entities.Role", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -107,19 +121,24 @@ namespace PLaboratory.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("bbdbc055-b8b9-42af-b667-9a18c854ee8e"),
+                            Name = "CHANGE_STUDENTS",
+                            Situation = 1
+                        });
                 });
 
             modelBuilder.Entity("PLaboratory.Core.Domain.DbContexts.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("CreateDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)")
-                        .HasDefaultValueSql("getdate()");
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -153,7 +172,7 @@ namespace PLaboratory.Infra.Data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<Guid>("UserGroupId")
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Username")
                         .IsRequired()
@@ -171,8 +190,7 @@ namespace PLaboratory.Infra.Data.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("char(50)");
+                        .HasColumnType("char(36)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(50)
@@ -191,6 +209,22 @@ namespace PLaboratory.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserGroups", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f97e565d-08af-4281-bc11-c0206eae06fa"),
+                            Description = "Administrador do sistema",
+                            Name = "Admin",
+                            Situation = 1
+                        },
+                        new
+                        {
+                            Id = new Guid("2c2ab8a3-3665-42ef-b4ef-bbec05ac02a5"),
+                            Description = "Usuario do sistema",
+                            Name = "Customer",
+                            Situation = 1
+                        });
                 });
 
             modelBuilder.Entity("PLaboratory.Core.Domain.DbContexts.Entities.MapUserGroupRoles", b =>
